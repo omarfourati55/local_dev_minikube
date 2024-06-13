@@ -1,0 +1,22 @@
+apiVersion: cluster.redpanda.com/v1alpha1
+kind: Redpanda
+metadata:
+  name: msd-redpanda
+spec:
+  chartRef: {}
+  clusterSpec:
+    external:
+      enabled: false
+    console:
+      enabled: false
+    tls:
+      enabled: false
+
+    statefulset:
+      replicas: 1
+      initContainers:
+        setDataDirOwnership:
+          enabled: true
+    config:
+      cluster:
+        auto_create_topics_enabled: true

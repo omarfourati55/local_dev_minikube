@@ -1,2 +1,3 @@
 # local_dev_minikube
-ein Container auf Basis vom Kubernetes Minikube
+This is a Test Container with minikube and kubernetes basically
+To start the Container it is juste necessary to call build_cluster.sh
